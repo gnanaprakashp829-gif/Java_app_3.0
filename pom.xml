@@ -1,4 +1,4 @@
-```xml
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -30,9 +30,6 @@
         <java.version>1.8</java.version>
         <lombok.version>1.18.42</lombok.version>
         <maven.compiler.plugin.version>3.14.0</maven.compiler.plugin.version>
-
-        <!-- SonarQube -->
-        <sonar.maven.plugin.version>5.7.0.6970</sonar.maven.plugin.version>
     </properties>
 
     <dependencies>
@@ -77,13 +74,11 @@
     <build>
         <plugins>
 
-            <!-- Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!-- Maven Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -94,15 +89,8 @@
                 </configuration>
             </plugin>
 
-            <!-- SonarQube -->
-            <plugin>
-                <groupId>org.sonarsource.scanner.maven</groupId>
-                <artifactId>sonar-maven-plugin</artifactId>
-                <version>${sonar.maven.plugin.version}</version>
-            </plugin>
-
         </plugins>
     </build>
 
 </project>
-```
+rewrite with correct sonar
