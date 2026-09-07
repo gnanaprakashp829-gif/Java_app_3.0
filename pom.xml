@@ -1,102 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-```
-<modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-<parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.2.1.RELEASE</version>
-    <relativePath/>
-</parent>
-
-<groupId>com.example</groupId>
-<artifactId>kubernetes-configmap-reload</artifactId>
-<version>0.0.1-SNAPSHOT</version>
-
-<name>kubernetes-configmap-reload</name>
-<description>Spring Boot Kubernetes ConfigMap Reload Application</description>
-
-<properties>
-    <java.version>1.8</java.version>
-    <spring-cloud-kubernetes.version>1.1.0.RELEASE</spring-cloud-kubernetes.version>
-    <lombok.version>1.18.42</lombok.version>
-    <maven.compiler.plugin.version>3.14.0</maven.compiler.plugin.version>
-    <sonar.maven.plugin.version>5.7.0.6970</sonar.maven.plugin.version>
-
-    <sonar.projectKey>kubernetes-configmap-reload</sonar.projectKey>
-    <sonar.projectName>kubernetes-configmap-reload</sonar.projectName>
-</properties>
-
-<dependencies>
-
-    <dependency>
+    <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.1.RELEASE</version>
+        <relativePath/>
+    </parent>
 
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
+    <groupId>com.example</groupId>
+    <artifactId>kubernetes-configmap-reload</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>kubernetes-configmap-reload</name>
+    <description>Spring Boot Kubernetes ConfigMap Reload Application</description>
 
-    <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
-        <version>${spring-cloud-kubernetes.version}</version>
-    </dependency>
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud-kubernetes.version>1.1.0.RELEASE</spring-cloud-kubernetes.version>
+        <lombok.version>1.18.42</lombok.version>
+        <maven.compiler.plugin.version>3.14.0</maven.compiler.plugin.version>
+        <sonar.maven.plugin.version>5.7.0.6970</sonar.maven.plugin.version>
 
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>${lombok.version}</version>
-        <optional>true</optional>
-    </dependency>
+        <sonar.projectKey>kubernetes-configmap-reload</sonar.projectKey>
+        <sonar.projectName>kubernetes-configmap-reload</sonar.projectName>
+    </properties>
 
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
+    <dependencies>
 
-    <dependency>
-        <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-test</artifactId>
-        <scope>test</scope>
-    </dependency>
-
-</dependencies>
-
-<build>
-    <plugins>
-
-        <plugin>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-maven-plugin</artifactId>
-        </plugin>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <version>${maven.compiler.plugin.version}</version>
-            <configuration>
-                <source>1.8</source>
-                <target>1.8</target>
-            </configuration>
-        </plugin>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
-        <plugin>
-            <groupId>org.sonarsource.scanner.maven</groupId>
-            <artifactId>sonar-maven-plugin</artifactId>
-            <version>${sonar.maven.plugin.version}</version>
-        </plugin>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
+            <version>${spring-cloud-kubernetes.version}</version>
+        </dependency>
 
-    </plugins>
-</build>
-```
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>${sonar.maven.plugin.version}</version>
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>
