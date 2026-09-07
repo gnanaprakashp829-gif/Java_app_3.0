@@ -23,13 +23,9 @@
 
 <properties>
     <java.version>1.8</java.version>
-
     <spring-cloud-kubernetes.version>1.1.0.RELEASE</spring-cloud-kubernetes.version>
-
     <lombok.version>1.18.42</lombok.version>
-
     <maven.compiler.plugin.version>3.14.0</maven.compiler.plugin.version>
-
     <sonar.maven.plugin.version>5.7.0.6970</sonar.maven.plugin.version>
 
     <sonar.projectKey>kubernetes-configmap-reload</sonar.projectKey>
@@ -38,26 +34,22 @@
 
 <dependencies>
 
-    <!-- Spring Boot Web -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
-    <!-- Actuator -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
 
-    <!-- Spring Cloud Kubernetes -->
     <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
         <version>${spring-cloud-kubernetes.version}</version>
     </dependency>
 
-    <!-- Lombok -->
     <dependency>
         <groupId>org.projectlombok</groupId>
         <artifactId>lombok</artifactId>
@@ -65,14 +57,12 @@
         <optional>true</optional>
     </dependency>
 
-    <!-- Unit Testing -->
     <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-test</artifactId>
         <scope>test</scope>
     </dependency>
 
-    <!-- Spring Security Test -->
     <dependency>
         <groupId>org.springframework.security</groupId>
         <artifactId>spring-security-test</artifactId>
@@ -84,13 +74,11 @@
 <build>
     <plugins>
 
-        <!-- Spring Boot -->
         <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
         </plugin>
 
-        <!-- Java Compiler -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -101,7 +89,6 @@
             </configuration>
         </plugin>
 
-        <!-- SonarQube -->
         <plugin>
             <groupId>org.sonarsource.scanner.maven</groupId>
             <artifactId>sonar-maven-plugin</artifactId>
