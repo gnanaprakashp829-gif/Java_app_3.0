@@ -3,8 +3,7 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -16,53 +15,38 @@
         <relativePath/>
     </parent>
 
-    <!-- Project Information -->
+    <!-- Project -->
     <groupId>com.minikube.sample</groupId>
     <artifactId>kubernetes-configmap-reload</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
     <packaging>jar</packaging>
 
     <name>kubernetes-configmap-reload</name>
-    <description>Spring Boot application with Kubernetes ConfigMap support</description>
+    <description>Spring Boot Kubernetes ConfigMap application</description>
 
-    <!-- ===================================================== -->
-    <!-- Properties                                            -->
-    <!-- ===================================================== -->
-
+    <!-- Properties -->
     <properties>
 
-        <!-- Java -->
         <java.version>1.8</java.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
 
-        <!-- Encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <!-- Dependencies -->
         <lombok.version>1.18.42</lombok.version>
 
-        <!-- Maven -->
         <maven.compiler.plugin.version>3.14.0</maven.compiler.plugin.version>
 
         <!-- SonarQube -->
         <sonar.maven.plugin.version>5.7.0.6970</sonar.maven.plugin.version>
-
-        <!-- SonarQube project -->
         <sonar.projectKey>kubernetes-configmap-reload</sonar.projectKey>
         <sonar.projectName>kubernetes-configmap-reload</sonar.projectName>
 
     </properties>
 
-    <!-- ===================================================== -->
-    <!-- Dependencies                                          -->
-    <!-- ===================================================== -->
-
+    <!-- Dependencies -->
     <dependencies>
 
-        <!-- Spring Boot Web -->
+        <!-- Spring Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -74,7 +58,7 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-        <!-- Spring Cloud Kubernetes -->
+        <!-- Kubernetes Config -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-kubernetes-config</artifactId>
@@ -89,7 +73,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Spring Boot Test -->
+        <!-- Testing -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -105,42 +89,28 @@
 
     </dependencies>
 
-    <!-- ===================================================== -->
-    <!-- Build Plugins                                         -->
-    <!-- ===================================================== -->
-
+    <!-- Build -->
     <build>
-
         <plugins>
 
-            <!-- ================================================= -->
-            <!-- Spring Boot Maven Plugin                          -->
-            <!-- ================================================= -->
-
+            <!-- Spring Boot -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
 
-            <!-- ================================================= -->
-            <!-- Maven Compiler Plugin                              -->
-            <!-- ================================================= -->
-
+            <!-- Maven Compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.compiler.plugin.version}</version>
-
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
 
-            <!-- ================================================= -->
-            <!-- SonarQube Maven Scanner                             -->
-            <!-- ================================================= -->
-
+            <!-- SonarQube -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
@@ -148,7 +118,6 @@
             </plugin>
 
         </plugins>
-
     </build>
 
 </project>
